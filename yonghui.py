@@ -17,7 +17,7 @@ class QingLongURLProcessor:
         # 请求参数
         self.payload = {
             "taskId": 1206,
-            "shopId": "9468",
+            "shopId": "9M7Y",
             "taskCode": "TASK1761895132409vOziLpV"
         }
         
