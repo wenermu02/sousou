@@ -6,7 +6,7 @@ from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
 from dotenv import load_dotenv
 from notify import send  # 导入通知功能
 
-# 完整抓包永辉线上超市小程序链接https://api.yonghuivip.com/web/member/task/doTask?xxxx
+# 手动签到永辉线上超市小程序一次，抓包签到链接https://api.yonghuivip.com/web/member/task/doTask?xxxx
 # 环境变量中yonghui为抓包的链接，如有多个以@分隔
 
 class QingLongURLProcessor:
@@ -18,11 +18,12 @@ class QingLongURLProcessor:
         self.payload = {
             "taskId": 1206,
             "shopId": "9M7Y",
+            # 如果可以，shopId尽量换成抓包链接中的
             "taskCode": "TASK1761895132409vOziLpV"
         }
         
         self.headers = {
-            'User-Agent': "Mozilla/5.0 (Linux; Android 15; RMX5080 Build/AP3A.240617.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/142.0.7444.21 Mobile Safari/537.36 XWEB/1420005 MMWEBSDK/20250904 MMWEBID/5673 MicroMessenger/8.0.65.2960(0x2800413C) WeChat/arm64 Weixin NetType/5G Language/zh_CN ABI/arm64 miniProgram/wxc9cf7c95499ee604",
+            'User-Agent': "Mozilla/5.0 (Linux; Android 13; RMX3350 Build/AP3A.240617.008; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/142.0.7444.21 Mobile Safari/537.36 XWEB/1420005 MMWEBSDK/20250904 MMWEBID/5673 MicroMessenger/8.0.65.2960(0x2800413C) WeChat/arm64 Weixin NetType/5G Language/zh_CN ABI/arm64 miniProgram/wxc9cf7c95499ee604",
             'Accept': "application/json",
             'Accept-Encoding': "gzip, deflate, br, zstd",
             'Content-Type': "application/json",
