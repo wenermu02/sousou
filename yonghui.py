@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 from notify import send  # 导入通知功能
 
 # 手动签到永辉线上超市小程序一次，抓包签到链接https://api.yonghuivip.com/web/member/task/doTask?xxxx
-# 环境变量中yonghui为抓包的链接，如有多个以@分隔
+# 环境变量中yonghui为抓包的链接，如有多个账号以@分隔
+# playload中taskID,shopID,taskCode替换为自己抓包的数据，多个账户可共用参数
 
 class QingLongURLProcessor:
     def __init__(self):
@@ -16,10 +17,12 @@ class QingLongURLProcessor:
         
         # 请求参数
         self.payload = {
-            "taskId": 1206,
-            "shopId": "9M7Y",
-            # 如果可以，shopId尽量换成抓包链接中的
-            "taskCode": "TASK1761895132409vOziLpV"
+            # 替换自己的抓包数据
+            "taskId": 1209,
+            # 替换自己的抓包数据
+            "shopId": "9335",
+            # 替换自己的抓包数据
+            "taskCode": "TASK1764409112693CheqOit"
         }
         
         self.headers = {
